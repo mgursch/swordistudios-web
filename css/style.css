@@ -301,80 +301,35 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--gold-soft);
 }
 
-.delikta-intro {
-  max-width: 36rem;
-  margin: 1.8rem auto 0;
-  font-size: clamp(1rem, 2vw, 1.15rem);
-  color: var(--cream-dim);
-}
+/* screenshot gallery — fanned phones like the Play Store feature banner */
 
-/* feature rows */
-
-.features { display: grid; gap: clamp(4rem, 8vw, 7rem); }
-
-.feature {
-  display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
-  align-items: center;
-  gap: clamp(2rem, 5vw, 4.5rem);
-}
-
-.feature:nth-child(even) .feature-shot { order: 2; }
-.feature:nth-child(even) .feature-copy { order: 1; text-align: right; }
-.feature:nth-child(even) .feature-copy .kicker { flex-direction: row-reverse; }
-
-.feature-shot {
+.gallery {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 
-.feature-shot img {
-  width: min(100%, 330px);
+.gallery img {
+  width: min(28%, 300px);
   border-radius: 22px;
   border: 1px solid rgba(229, 165, 63, 0.35);
   box-shadow:
     0 30px 60px rgba(0, 0, 0, 0.5),
     0 0 0 6px rgba(229, 165, 63, 0.06);
-  rotate: -2.5deg;
   transition: rotate 0.5s cubic-bezier(0.2, 0.7, 0.3, 1), scale 0.5s cubic-bezier(0.2, 0.7, 0.3, 1);
 }
 
-.feature:nth-child(even) .feature-shot img { rotate: 2.5deg; }
+.gallery img:first-child { rotate: -6deg; translate: 2% 6%; }
+.gallery img:last-child  { rotate: 6deg;  translate: -2% 6%; }
+.gallery img:nth-child(2) { position: relative; z-index: 2; scale: 1.06; }
 
-.feature-shot img:hover { rotate: 0deg; scale: 1.02; }
-
-.feature-copy h2 {
-  font-family: var(--serif);
-  font-size: clamp(1.7rem, 4vw, 2.5rem);
-  line-height: 1.15;
-  margin: 0.9rem 0 0.8rem;
-  color: var(--gold);
-}
-
-.feature-copy h2::first-line { color: var(--gold); }
-
-.feature-copy p:not(.kicker) {
-  color: var(--cream-dim);
-  font-size: clamp(0.98rem, 1.8vw, 1.08rem);
-  max-width: 26rem;
-}
-
-.feature:nth-child(even) .feature-copy p:not(.kicker) { margin-left: auto; }
+.gallery img:hover { rotate: 0deg; scale: 1.08; z-index: 3; }
 
 /* CTA */
 
 .delikta-cta {
   text-align: center;
-  margin-top: clamp(5rem, 9vw, 7.5rem);
-  padding-top: clamp(3rem, 6vw, 4.5rem);
-  border-top: 1px solid rgba(229, 165, 63, 0.2);
-}
-
-.delikta-cta h2 {
-  font-family: var(--serif);
-  font-size: clamp(1.8rem, 4.5vw, 2.7rem);
-  color: var(--cream);
-  margin-bottom: 2rem;
+  margin-top: clamp(4rem, 7vw, 6rem);
 }
 
 .store-buttons {
@@ -503,13 +458,7 @@ img { max-width: 100%; height: auto; display: block; }
   .nav-links { display: none; }
   .nav-brand { flex: 1; }
 
-  .feature { grid-template-columns: 1fr; gap: 1.8rem; }
-  .feature:nth-child(even) .feature-shot { order: 0; }
-  .feature:nth-child(even) .feature-copy { order: 1; text-align: left; }
-  .feature:nth-child(even) .feature-copy .kicker { flex-direction: row; }
-  .feature:nth-child(even) .feature-copy p:not(.kicker) { margin-left: 0; }
-  .feature-copy { text-align: left; }
-  .feature-shot img { width: min(78%, 300px); }
+  .gallery img { width: 30%; border-radius: 12px; }
 
   .delikta { clip-path: polygon(0 0, 100% 1.2rem, 100% 100%, 0 calc(100% - 1.2rem)); margin: -1.2rem 0; }
 }
@@ -521,5 +470,5 @@ img { max-width: 100%; height: auto; display: block; }
   .feather, .scroll-hint span { animation: none; }
   .hero-logo, .hero-tag, .hero-sub, .hero-cta { animation-duration: 0.01s; animation-delay: 0s; }
   .reveal { opacity: 1; transform: none; transition: none; }
-  .feature-shot img { transition: none; }
+  .gallery img { transition: none; }
 }
