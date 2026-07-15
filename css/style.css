@@ -354,16 +354,19 @@ img { max-width: 100%; height: auto; display: block; }
 .store-btn small { font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.8; }
 .store-btn strong { font-size: 1.15rem; }
 
+/* modeled after the official "Get it on Google Play" badge */
 .store-btn.play {
-  background: var(--gold);
-  color: var(--navy);
-  box-shadow: 0 10px 30px rgba(229, 165, 63, 0.25);
-  transition: transform 0.25s, box-shadow 0.25s;
+  background: #000;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
 }
 
 .store-btn.play:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 36px rgba(229, 165, 63, 0.4);
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.6);
 }
 
 .store-btn.soon {
