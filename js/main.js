@@ -20,7 +20,7 @@
       "studio.kicker": "The studio",
       "studio.title": "Games with words.",
       "studio.text": "swordi.studios is an independent game studio from Austria. We build small, thoughtful mobile games with a love for language and storytelling — one case at a time.",
-      "studio.contact": 'Say hello: <a href="mailto:hello@swordistudios.com">hello@swordistudios.com</a>',
+      "studio.contact": 'Say hello: <a href="mailto:swordistudios@gmail.com">swordistudios@gmail.com</a>',
       "footer.imprint": "Imprint",
       "footer.privacy": "Privacy Policy"
     },
@@ -39,7 +39,7 @@
       "studio.kicker": "Das Studio",
       "studio.title": "Spiele mit Worten.",
       "studio.text": "swordi.studios ist ein unabhängiges Game Studio aus Österreich. Wir bauen kleine, durchdachte Mobile Games mit Liebe zu Sprache und Storytelling — Fall für Fall.",
-      "studio.contact": 'Sag hallo: <a href="mailto:hello@swordistudios.com">hello@swordistudios.com</a>',
+      "studio.contact": 'Sag hallo: <a href="mailto:swordistudios@gmail.com">swordistudios@gmail.com</a>',
       "footer.imprint": "Impressum",
       "footer.privacy": "Datenschutzerklärung"
     }
